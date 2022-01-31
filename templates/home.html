@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="form-body">
+      <form action="/predict" method="POST">
+        <div class="heading">Prize Selection Form</div>
+        <div class="date-time departure">
+          <label for="departure-datetime">Departure Date and Time</label>
+          <input type="datetime-local" name="Dep_Time" />
+        </div>
+
+        <div class="date-time arrival">
+          <label for="arrival-datetime">Arrival Date and Time</label>
+          <input type="datetime-local" name="Arrival_Time" />
+        </div>
+
+        <div class="select source">
+          <label for="source">Source</label>
+          <select name="source">
+            <option value="Delhi">Delhi</option>
+            <option value="Kolkata">Kolkata</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Chennai">Chennai</option>
+          </select>
+        </div>
+        <div class="select destination">
+          <label for="destination">Destination</label>
+          <select name="Destination">
+            <option value="Cochin">Cochin</option>
+            <option value="Banglore">Banglore</option>
+            <option value="Delhi">Delhi</option>
+            <option value="New_Delhi">New Delhi</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Kolkata">Kolkata</option>
+          </select>
+        </div>
+
+
+        <div class="select airlines">
+          <label for="airlines">Airlines</label>
+          <select name="airline">
+            <option value="Jet Airways">Jet Airways</option>
+            <option value="IndiGo">IndiGo</option>
+            <option value="Air India">Air India</option>
+            <option value="Multiple carriers">Multiple carriers</option>
+            <option value="SpiceJet">SpiceJet</option>
+            <option value="Vistara">Vistara</option>
+            <option value="Air Asia">Air Asia</option>
+            <option value="Go Air">GoAir</option>
+            <option value="Jet Airways Business">Jet Airways Bussiness</option>
+            <option value="Vistara Premium economy">Vistara Premium economy</option>
+            <option value="Trujet">Trujet</option>
+            <option value="Multiple carriers Premium economy">
+              Multiple Carriers Premium Economy
+            </option>
+          </select>
+        </div>
+
+        <div class="select stop" name="stops">
+          <label for="stop">Destination</label>
+          <select name="stops">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+    
+    <h3 style="position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    padding-top: 24px;">{{ prediction_text }}</h3>
+
+   
+    <div class="footer">
+      Created by Rajnish Kumar Chaudhary and Pratik Kumar
+    </div>
+  </body>
+</html>
